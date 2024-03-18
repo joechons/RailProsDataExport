@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RailProsDataExport.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppLevel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Q</Value>
+    </Setting>
+    <Setting Name="QAServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">engqasql.nscorp.com</Value>
+    </Setting>
+    <Setting Name="DEVServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">engdevsql.nscorp.com</Value>
+    </Setting>
+    <Setting Name="PRODServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">engsql.nscorp.com</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
