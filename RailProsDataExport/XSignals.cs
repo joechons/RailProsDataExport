@@ -42,21 +42,21 @@ public class XSignalsDataContext
                 SqlDataReader reader = sqlCmd.ExecuteReader();
 
                 // Export runs at most once a day, appending today's date should result in a unique file name
-                string filePath = "//engqasql.nscorp.com/D$/XSignals/RailPros/";
+                string filePath = String.Empty;
                 switch (AppLevel.ToUpper())
                 {
                     case "D":
-                        filePath = "//engqasql.nscorp.com/D$/XSignals/RailPros/";
+                        filePath = Settings.Default.DEVServer;
                         break;
                     case "Q":
-                        filePath = "//engqasql.nscorp.com/D$/XSignals/RailPros/";
+                        filePath = Settings.Default.QAServer;
                         break;
                     case "P":
-                        filePath = "//engqasql.nscorp.com/D$/XSignals/RailPros/";
+                        filePath = Settings.Default.PRODServer;
                         break;
                 }
-                
-                string fileName = "NS_Outbound_" + DateTime.Today.ToString("d").Replace("/", "_") + ".csv";
+                filePath += "D$/XSignals/RailPros/";
+                string fileName = "NS_Outbound_" + DateTime.Today.ToString("yyyyMMdd") + ".csv";
                 string fullFilePath = Path.Combine(filePath, fileName);
                 using (StreamWriter sw = new StreamWriter(fullFilePath))
                 {
